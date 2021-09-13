@@ -1,0 +1,17 @@
+{
+	"name": "Google",
+	"url": "https://google.com",
+	"page": 66,
+	"isNonProfit": false,
+	"address": {
+		"street": "xxxx",
+		"city": "CA",
+		"country": "USA"
+	},
+	"links": [
+		{"name": "Google", "url": "https://www.google.com"},
+		{"name": "DuckDuckGo", "url": "https://www.duckduckgo.com"},
+		{"name": "Startpages", "url": "https://www.startpages.com"},
+		{"name": "bing", "url": "https://www.bing.com"}
+	]
+}

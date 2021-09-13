@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+		<ul>
+			<li v-for="item in items">
+				{{ item.message }}
+			</li>
+		</ul>
+    </div>
+</body>
+
+<script>
+    var vue = new Vue({
+        el:"#app",
+        data: {
+			items: [
+					{message: "foo"},
+					{message: "bar"}
+				]
+        }
+    })
+</script>
+</html>

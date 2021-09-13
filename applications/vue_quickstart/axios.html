@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Axios</title>
+</head>
+<body>
+    <div id="app">
+		<div> Name: {{ info.name }}</div>
+		<div> Url: {{ info.url}}</div>
+		<div> address: {{ info.address.country }}-->{{info.address.city}}-->{{info.address.street}}</div>
+
+		<ul>
+		<li v-for="link in info.links">{{link.name}}--->{{link.url}}</li>
+	</ul>
+    </div>
+    
+	</body>
+
+<script>
+    var vue = new Vue({
+        el:"#app",
+		data() {
+			return {
+			info: {
+				name:'',
+				url:'',
+				address: {
+					country:'',
+					city:'',
+					street:''
+					},
+					links : [
+							{name:''},
+							{url:''}
+						]
+
+				}
+										
+				}},
+			mounted() {
+					axios
+						.get('data.json')
+						.then(response=>this.info=response.data);
+				}
+	})
+</script>
+</html>
